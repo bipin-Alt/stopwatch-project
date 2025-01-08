@@ -1,0 +1,107 @@
+ /* declaration of variables  */
+ :root{
+    --border-radius : .3rem;
+    --letter-spacing : .25rem;
+    --transition: all .3s linear;
+    --background-color:#027373;
+    --text-color:#f4f4f4;
+    --btn-background:#8C1F28;
+    --btn-background-hover:#011F26;
+    --btn-color:#f2f2f2;
+    --delete-btn-background:#8C1F28;
+    --delete-btn-background-hover:#5C0F16;
+    --edit-btn-background:#2E8B57;
+    --edit-btn-background-hover:#1B4D2B;
+    --box-shadow : 0px 8px 18px #59381B;
+    --box-shadow-hover : 0px 10px 20px #59381B;
+    --select-dropdown-background :#D96941;
+    --select-dropdown-color :#f4f4f4;
+    --select-dropdown-hover :#193C40;
+    --font-family : "Courier","Source Sans Pro", "Arial";
+    --font-size : 1rem;
+    --max-width : 1170px;
+}
+
+/*styling the body */
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+/* styling the clock container */
+.clock-container{
+    border:1px solid #ccc;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 15px #D96941;
+    padding:2rem;
+    height:70vh;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+}
+.titles h1{
+    margin-bottom:1rem;
+    letter-spacing: var(--letter-spacing);
+}
+
+.digital-display{
+    font-size:4rem;
+    font-weight:bold;
+    display: flex;
+    margin-bottom:3rem;
+}
+
+/* styling the buttons */
+.button-container{
+    display: flex;
+    align-items: center;
+    margin-bottom:2rem;
+}
+.btn{
+    padding: .5rem 1rem;
+    border:none;
+    border-radius: var(--border-radius);
+    background-color: var(--btn-background);
+    color: var(--btn-color);
+    transition: background-color .3s linear;
+    cursor: pointer;
+    margin-left:2rem;
+    width:7rem;
+    letter-spacing:var(--letter-spacing);
+    font-size:1rem;
+}
+
+.btn:hover{
+    background-color: var(--btn-background-hover);
+}
+
+@media screen and (max-width: 670px) {
+    .button-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:1rem;
+    }
+    .digital-display{
+        font-size:2rem;
+        margin-bottom:1rem;
+        flex-direction: column;
+    }
+    .clock-container{
+        height:90vh;
+        width:100%;
+        padding:1rem;
+    }
+}
